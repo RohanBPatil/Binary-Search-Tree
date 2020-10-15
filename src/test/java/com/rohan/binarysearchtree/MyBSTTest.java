@@ -35,7 +35,7 @@ class MyBSTTest {
 		bst.add(70);
 		assertEquals(3, bst.size());
 	}
-	
+
 	@Test
 	void whenAllNodesAdded_shouldReturn_itsSize() {
 		MyBST<Integer> bst = new MyBST<>();
@@ -53,5 +53,43 @@ class MyBSTTest {
 		bst.add(63);
 		bst.add(67);
 		assertEquals(13, bst.size());
+	}
+
+	@Test
+	void ifNodePresent_shouldReturn_true() {
+		MyBST<Integer> bst = new MyBST<>();
+		bst.add(56);
+		bst.add(30);
+		bst.add(70);
+		bst.add(22);
+		bst.add(40);
+		bst.add(11);
+		bst.add(3);
+		bst.add(16);
+		bst.add(60);
+		bst.add(95);
+		bst.add(65);
+		bst.add(63);
+		bst.add(67);
+		assertTrue(bst.search(63));
+	}
+
+	@Test
+	void ifNodeNodePresent_shouldReturn_false() {
+		MyBST<Integer> bst = new MyBST<>();
+		bst.add(56);
+		bst.add(30);
+		bst.add(70);
+		bst.add(22);
+		bst.add(40);
+		bst.add(11);
+		bst.add(3);
+		bst.add(16);
+		bst.add(60);
+		bst.add(95);
+		bst.add(65);
+		bst.add(63);
+		bst.add(67);
+		assertFalse(bst.search(100));
 	}
 }
